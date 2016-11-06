@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/light.css">
     <script src="javascripts/scale.fix.js"></script>
+	<script src="//lib.baomitu.com/layer/2.3/layer.js"></script>
+	<link href="//lib.baomitu.com/layer/2.3/skin/layer.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//lib.baomitu.com/html5shiv/r29/html5.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body onLoad="onLoad()">
     <div class="wrapper">
       <header>
         <img src="http://acelieren.tk:88/site-images/ACE-LOGO.png" style="width: 160px; height: 160px;">
@@ -23,11 +25,26 @@
           <li class="download"><a class="buttons" href="#">下载ACE登录器</a></li>
           <li class="download"><a class="buttons" href="http://acelieren.tk:88/" target="_bank">战队RANK系统</a></li>
           <li><a class="buttons" href="http://jq.qq.com/?_wv=1027&k=41EQ3F3" target="_bank">加入QQ群</a></li>
+	  <li><a class="buttons" href="http://jq.qq.com/?_wv=1027&k=41EQ3F3" id='acecn'>立即加入服务器</a>
+<script>
+//MESSAGE
+$('#acecn').on('click', function(){
+//询问用户
+layer.confirm('是否使用战地2联机平台立即加入服务器？', {
+  btn: ['进入游戏','安装平台']
+}, function(){
+window.location.href='bfcn://115.231.218.195-1926';
+}, function(){
+window.open('http://www.fpsace.com/bf2');
+});
+});
+</script>
+
+		</li>
         </ul>
 
         <p class="header">
-	      ACE猎人战队服务器：<br />
-		采用BF2CN:<a href="bfcn://115.231.218.195-1926">[快速加入]</a>
+	      快速加入服务器功能基于BF2CN应用程序的网页支持，请注意下载和启用该功能插件。
 	      </p>
 
 
